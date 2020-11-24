@@ -13,11 +13,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2.3.4
       - name: Set up JDK 11
         uses: joschi/setup-jdk@7134ae95986e4e0a4f9f0b51345c93fcebfc4ea9
         with:
           java-version: openjdk11
       - name: Build
-        run: mvn clean install
+        run: |
+          echo "JAVA_HOME=/opt/hostedtoolcache/AdoptOpenJDK/1.0.0-releases-openjdk11-hotspot-normal-latest/x64" >> $GITHUB_ENV
+          mvn clean install
 
