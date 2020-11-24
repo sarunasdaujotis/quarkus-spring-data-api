@@ -15,7 +15,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2.3.4
       - name: Set up JDK 11
-        uses: joschi/setup-jdk@7134ae95986e4e0a4f9f0b51345c93fcebfc4ea9
+#        uses: joschi/setup-jdk@7134ae95986e4e0a4f9f0b51345c93fcebfc4ea9
+        uses: joschi/setup-jdk@68381f2c0646f942f70b69f8e81fe10e1ed5d293
         with:
           java-version: openjdk11
       - name: Build
